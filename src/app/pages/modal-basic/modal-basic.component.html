@@ -1,0 +1,133 @@
+
+<h1>hooo</h1>
+<h1>hooo</h1>
+<h1>hooo</h1>
+<h1>hooo</h1>
+<h1>hooo</h1>
+<h1>hooo</h1>
+<h1>hooo</h1>
+<h1>hooo</h1>
+<h1>hooo</h1>
+<div _ngcontent-serverapp-c6="" class="col-md-12 mx-auto text-center mt-5">
+    <h4 _ngcontent-serverapp-c6="" class="text-center">Master Detail Table</h4>
+    <div _ngcontent-serverapp-c6="" class="row">
+        <table _ngcontent-serverapp-c6="" class="z-depth-1 table table-striped" mdbtable="" striped="true">
+            <thead _ngcontent-serverapp-c6="">
+                <tr _ngcontent-serverapp-c6="">
+                    <!---->
+                    <th _ngcontent-serverapp-c6="" scope="col"> ID </th>
+                    <th _ngcontent-serverapp-c6="" scope="col"> First </th>
+                    <th _ngcontent-serverapp-c6="" scope="col"> Last </th>
+                    <th _ngcontent-serverapp-c6="" scope="col"> Handle </th>
+                </tr>
+            </thead>
+            <!---->
+            <tbody _ngcontent-serverapp-c6="" mdbtablecol="">
+                <tr _ngcontent-serverapp-c6="">
+                    <td _ngcontent-serverapp-c6="" scope="row">
+                        <!---->
+
+
+
+                        <button _ngcontent-serverapp-c6=""  [style.background]="this.color"  (click)="toggleColor()" class="master-button  btn"  mdbbtn="" mdbwaveseffect="" type="button ">
+                            <mdb-icon _ngcontent-serverapp-c6="" fas="" icon="angle-down" class="fas"><i class="fa-angle-down fas"></i></mdb-icon>
+                        </button>
+                        <button _ngcontent-serverapp-c6=""  *ngif ="!show" class="master-button btn-success btn" color="success" mdbbtn="" mdbwaveseffect="" type="button  ">
+                            <mdb-icon _ngcontent-serverapp-c6="" fas="" icon="angle-right" class="fas"><i class="fa-angle-right fas"></i></mdb-icon>
+                        </button>
+
+
+
+                        <!----><span _ngcontent-serverapp-c6="" class="ml-1">1</span></td>
+                    <td _ngcontent-serverapp-c6="">Mark</td>
+                    <td _ngcontent-serverapp-c6="">Otto</td>
+                    <td _ngcontent-serverapp-c6="">@mdo</td>
+                </tr>
+                <!---->
+                <tr _ngcontent-serverapp-c6="" style="text-align: center; background-color: rgba(0, 0, 0,  0.015)">
+                    <td _ngcontent-serverapp-c6="" colspan="100%" style="border: 0 !important">
+                        <table _ngcontent-serverapp-c6="" mdbtable="" class="table">
+                            <thead _ngcontent-serverapp-c6="" class="black white-text">
+                                <tr _ngcontent-serverapp-c6="">
+                                    <!---->
+                                    <th _ngcontent-serverapp-c6="" scope="col"> Order Id </th>
+                                    <th _ngcontent-serverapp-c6="" scope="col"> Order Date </th>
+                                    <th _ngcontent-serverapp-c6="" scope="col"> Adress </th>
+                                </tr>
+                            </thead>
+                            <!---->
+                            <tbody _ngcontent-serverapp-c6="">
+                                <tr _ngcontent-serverapp-c6="">
+                                    <td _ngcontent-serverapp-c6="">1</td>
+                                    <td _ngcontent-serverapp-c6="">24-07-1996</td>
+                                    <td _ngcontent-serverapp-c6="">35 King George</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+            </tbody>
+            <tbody _ngcontent-serverapp-c6="" mdbtablecol="">
+                <tr _ngcontent-serverapp-c6="">
+                    <td _ngcontent-serverapp-c6="" scope="row">
+                        
+                        <button class="master-button  btn"   [style.background]="this.color"  (click)="toggleColor()" (click)="isCollapsed = !isCollapsed"
+                        [attr.aria-expanded]="!isCollapsed" aria-controls="collapseExample"   type="button ">
+                            <mdb-icon fas="" icon="angle-down" class="fas"><i class="fa-angle-down fas"></i></mdb-icon>
+                        </button>
+                        <span  class="ml-1">2</span></td>
+                        <td >Jacob</td>
+                        <td >Thornton</td>
+                        <td >@fat</td>
+                    </tr>
+                
+                <tr  id="collapseExample" [ngbCollapse]="isCollapsed" style="text-align: center; background-color: rgba(0, 0, 0,  0.015)"  >
+                    <td  colspan="100%" style="border: 0 !important">
+                        <table  mdbtable="" class="table">
+                            <thead  class="black white-text">
+                                <tr >
+                                   
+                                    <th  scope="col"> Order Id </th>
+                                    <th  scope="col"> Order Date </th>
+                                    <th  scope="col"> Adress </th>
+                                </tr>
+                            </thead>
+                            <!---->
+                            <tbody _ngcontent-serverapp-c6="">
+                                <tr _ngcontent-serverapp-c6="">
+                                    <td _ngcontent-serverapp-c6="">2</td>
+                                    <td _ngcontent-serverapp-c6="">04-01-1992</td>
+                                    <td _ngcontent-serverapp-c6="">Obere Str. 57</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+            </tbody>
+            <tbody _ngcontent-serverapp-c6="" mdbtablecol="">
+                <tr _ngcontent-serverapp-c6="">
+                    <td _ngcontent-serverapp-c6="" scope="row">
+                        <!---->
+                        <!---->
+                        <button _ngcontent-serverapp-c6="" class="master-button btn-success btn" color="success" mdbbtn="" mdbwaveseffect="" type="button  ">
+                            <mdb-icon _ngcontent-serverapp-c6="" fas="" icon="angle-right" class="fas"><i class="fa-angle-right fas"></i></mdb-icon>
+                        </button><span _ngcontent-serverapp-c6="" class="ml-1">3</span></td>
+                    <td _ngcontent-serverapp-c6="">Larry</td>
+                    <td _ngcontent-serverapp-c6="">the Bird</td>
+                    <td _ngcontent-serverapp-c6="">@twitter</td>
+                </tr>
+                <!---->
+
+                
+            </tbody>
+            
+        </table>
+
+
+
+
+        
+        
+    </div>
+</div>
+

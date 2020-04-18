@@ -1,0 +1,349 @@
+
+
+              <mat-horizontal-stepper [linear]="isLinear" #stepper>
+                <mat-step [stepControl]="thirdFormGroup">
+                  <form [formGroup]="thirdFormGroup">
+                 <ng-template matStepLabel>Step1</ng-template>
+                 <div class="table-dark">
+                  <div class="row mt-5">
+                    <div class="col">
+                      <div class="card bg-default shadow">
+                        <div class="card-header bg-transparent border-0">
+                  <form>
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <label> <h2 class="text-primary">  Name/surname of the team leader</h2></label>
+                          <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="">
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                      <div class="form-group">
+                        <label> <h2 class="text-primary"> Team :</h2></label>
+                        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="">
+                      </div>
+                      </div>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label> <h2 class="text-primary"> The concerned/the  resource :</h2></label>
+                        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="">
+                      </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <label><h2 class="text-primary"> The post of the concerned :</h2> </label>
+                          <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="">
+                        </div>
+                        </div>
+                      </div>
+                  </form>
+                      </div>
+                      </div>
+                      </div>
+                      </div>
+                      </div>
+                  </form>
+                </mat-step>
+                <mat-step [stepControl]="firstFormGroup">
+                  <form [formGroup]="firstFormGroup">
+                    <ng-template matStepLabel>Mastery of job</ng-template>
+                    <div class="row mt-5">
+                      <div class="col">
+                        <div class="card bg-default shadow">
+                          <div class="card-header bg-transparent border-0">
+                            <h1 class="text-white mb-0">Recruitment evaluation</h1>
+                          </div>
+                          <div class="table-responsive">
+                            <table class="table align-items-center table-dark table-flush">
+                              <thead class="thead-dark">
+                                <tr>
+                                  <th colspan="2" ><h2 class="text-primary"> &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Indicators</h2></th>
+                                  <th scope="col"><h2 class="text-primary">Criteria Weight</h2></th>
+                                  <th scope="col"><h2 class="text-primary">Appreciation</h2></th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <td><h3 class="text-white  align-items-centermb-0">Quality of work produced/Rigor</h3></td>
+                                  <td><h4 class="text-white mb-0">build quality as a <br>constant in the work<br>
+                                    reliability and accuracy <br>of the data transmitted<br></h4></td>
+                                   <td> <input type="text" class="form-control" id="exampleFormControlInput1" placeholder=" "></td>
+                                  <td class="text-right">
+                                   <select class="browser-default custom-select">
+                                    <option selected ></option>
+                                    <option value="1">1-Ne réponds pas aux attentes (- -)</option>
+                                    <option value="2 ">2-fait correctement des parties, Besoins d'amélioration (-)</option>
+                                    <option value="3">3- Fait correctement ses taches. Correspond aux attentes (+)</option>
+                                    <option value="4">4- Fait bien ses tâches et parfois les dépasse. En dessus des atentes  (++/+++)</option>
+                                    </select>  
+                                    </td>
+                                  </tr>
+                                 <tr>
+                                  <td><h2 class="text-white mb-0">Analytical skills</h2></td>
+                                  <td><h4 class="text-white mb-0">be able to visualize,<br> articulate, and solve <br>both
+                                    complex and <br>uncomplicated problems <br>and concepts 
+                                    and make <br>decisions that are sensical <br>based on 
+                                   available information<br></h4></td>
+                                  <td> <input type="text" class="form-control" id="exampleFormControlInput1" placeholder=" "></td>
+                                  <td class="text-right">
+                                    <select class="browser-default custom-select">
+                                      <option selected></option>
+                                      <option value="1">1-Ne réponds pas aux attentes (- -)</option>
+                                      <option value="2 ">2-fait correctement des parties, Besoins d'amélioration (-)</option>
+                                      <option value="3">3- Fait correctement ses taches. Correspond aux attentes (+)</option>
+                                      <option value="4">4- Fait bien ses tâches et parfois les dépasse. En dessus des atentes  (++/+++)</option>
+                                     </select>  
+                                   </td>
+                                  </tr>
+                                 <tr>
+                                  <td><h2 class="text-white mb-0">Technicity</h2></td>
+                                  <td><h4 class="text-white mb-0">be able to visualize,
+                                    articulate, and solve<br>
+                                    both complex and <br>uncomplicated
+                                    problems and concepts<br>
+                                    and make decisions that<br>
+                                    are sensical based on<br>
+                                    available information<br</h4></td>
+                                  <td> <input type="text" class="form-control" id="exampleFormControlInput1" placeholder=" "></td>
+                                  <td class="text-right">
+                                    <select class="browser-default custom-select">
+                                      <option selected></option>
+                                      <option value="1">1-Ne réponds pas aux attentes (- -)</option>
+                                      <option value="2 ">2-fait correctement des parties, Besoins d'amélioration (-)</option>
+                                      <option value="3">3- Fait correctement ses taches. Correspond aux attentes (+)</option>
+                                      <option value="4">4- Fait bien ses tâches et parfois les dépasse. En dessus des atentes  (++/+++)</option>
+                                    </select>  
+                                 </td>
+                                </tr>  
+                               </tbody>
+                                </table>
+                                </div>
+                                </div>
+                                </div>
+                                </div>     
+                              </form>
+                            </mat-step>
+                      <mat-step [stepControl]="secondFormGroup">
+                        <form [formGroup]="secondFormGroup">
+                                  <ng-template matStepLabel>Behavior</ng-template>
+                                  <div class="row mt-5">
+                                    <div class="col">
+                                      <div class="card bg-default shadow">
+                                        <div class="card-header bg-transparent border-0">
+                                          <h1 class="text-white mb-0">Recruitment evaluation</h1>
+                                        </div>
+                                    <div class="table-responsive">
+          <table class="table align-items-center table-dark table-flush">
+            <thead class="thead-dark">
+              <tr>
+                <th colspan="2" ><h2 class="text-primary">&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Indicators</h2></th>
+                <th scope="col"><h2 class="text-primary">Criteria Weight</h2></th>
+                <th scope="col"><h2 class="text-primary">Appreciation</h2></th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><h3 class="text-white mb-0">Motivation for the job</h3></td>
+                    <td><h4 class="text-white mb-0">seek to achieve goals <br>beyond the minimum level<br></h4></td>
+                     <td> <input type="text" class="form-control" id="exampleFormControlInput1" placeholder=" "></td>
+                    <td class="text-right">
+                     <select class="browser-default custom-select">
+                      <option selected ></option>
+                      <option value="1">1-Ne réponds pas aux attentes (- -)</option>
+                      <option value="2 ">2-fait correctement des parties, Besoins d'amélioration (-)</option>
+                      <option value="3">3- Fait correctement ses taches. Correspond aux attentes (+)</option>
+                      <option value="4">4- Fait bien ses tâches et parfois les dépasse. En dessus des atentes  (++/+++)</option>
+                      </select>  
+                      </td>
+                    </tr>
+                   <tr>
+                    <td><h2 class="text-white mb-0">Relationship with the hierarchy</h2></td>
+                    <td><h4 class="text-white mb-0">Take into account advice<br> and cooperate
+                      comply with Focus' <br>policies and procedures<br></h4></td>
+                    <td> <input type="text" class="form-control" id="exampleFormControlInput1" placeholder=" "></td>
+                    <td class="text-right">
+                      <select class="browser-default custom-select">
+                        <option selected></option>
+                        <option value="1">1-Ne réponds pas aux attentes (- -)</option>
+                        <option value="2 ">2-fait correctement des parties, Besoins d'amélioration (-)</option>
+                        <option value="3">3- Fait correctement ses taches. Correspond aux attentes (+)</option>
+                        <option value="4">4- Fait bien ses tâches et parfois les dépasse. En dessus des atentes  (++/+++)</option>
+                       </select>  
+                     </td>
+                    </tr>
+                   <tr>
+                    <td><h2 class="text-white mb-0">Team work & Knowledge sharing</h2></td>
+                    <td><h4 class="text-white mb-0">know how to share<br> with the team
+                      help<br> colleagues spontaneously<br> or following a request<br></h4></td>
+                    <td> <input type="text" class="form-control" id="exampleFormControlInput1" placeholder=" "></td>
+                    <td class="text-right">
+                      <select class="browser-default custom-select">
+                        <option selected></option>
+                        <option value="1">1-Ne réponds pas aux attentes (- -)</option>
+                        <option value="2 ">2-fait correctement des parties, Besoins d'amélioration (-)</option>
+                        <option value="3">3- Fait correctement ses taches. Correspond aux attentes (+)</option>
+                        <option value="4">4- Fait bien ses tâches et parfois les dépasse. En dessus des atentes  (++/+++)</option>
+                       </select>  
+                   </td>
+                  </tr>
+                   <tr>
+                    <td><h2 class="text-white mb-0">Self tolerance and stress control</h2></td>
+                    <td><h4 class="text-white mb-0">overcome the pressure of <br>the goals and of the client<br></h4></td>
+                    <td> <input type="text" class="form-control" id="exampleFormControlInput1" placeholder=" "></td>
+                    <td class="text-right">
+                      <select class="browser-default custom-select">
+                        <option selected></option>
+                        <option value="1">1-Ne réponds pas aux attentes (- -)</option>
+                        <option value="2 ">2-fait correctement des parties, Besoins d'amélioration (-)</option>
+                        <option value="3">3- Fait correctement ses taches. Correspond aux attentes (+)</option>
+                        <option value="4">4- Fait bien ses tâches et parfois les dépasse. En dessus des atentes  (++/+++)</option>
+                       </select>  
+                     </td>
+                      </tr> 
+                </tbody>
+                </table>
+                </div>
+                </div>
+                </div>
+                </div>
+                  </form>
+                </mat-step>
+                <mat-step [stepControl]="thirdFormGroup">
+                  <form [formGroup]="thirdFormGroup">
+                 <ng-template matStepLabel>Communication</ng-template>
+                 <div class="row mt-5">
+                  <div class="col">
+                    <div class="card bg-default shadow">
+                      <div class="card-header bg-transparent border-0">
+                        <h1 class="text-white mb-0">Recruitment evaluation</h1>
+                      </div>
+                  <div class="table-responsive">
+            <table class="table align-items-center table-dark table-flush">
+             <thead class="thead-dark">
+        <tr>
+          <th colspan="2" ><h2 class="text-primary"> &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Indicators</h2></th>
+          <th scope="col"><h2 class="text-primary">Criteria Weight</h2></th>
+          <th scope="col"><h2 class="text-primary">Appreciation</h2></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+              <td rowspan="2"><h3 class="text-white mb-0">English</h3></td>
+                <td><h4 class="text-white mb-0">clarity of oral communication<br> (communication with the team <br>leaders and with the client)<br>
+              </h4></td>
+             <td> <input type="text" class="form-control" id="exampleFormControlInput1" placeholder=" "></td>
+            <td class="text-right">
+             <select class="browser-default custom-select">
+              <option selected ></option>
+              <option value="1">1-Ne réponds pas aux attentes (- -)</option>
+              <option value="2 ">2-fait correctement des parties, Besoins d'amélioration (-)</option>
+              <option value="3">3- Fait correctement ses taches. Correspond aux attentes (+)</option>
+              <option value="4">4- Fait bien ses tâches et parfois les dépasse. En dessus des atentes  (++/+++)</option>
+              </select>  
+              </td>
+            </tr>
+           <tr>
+            <td><h4 class="text-white mb-0">Clarity of written communication (Mailing/reporting…) <br>both
+              </h4></td>
+            <td> <input type="text" class="form-control" id="exampleFormControlInput1" placeholder=" "></td>
+            <td class="text-right">
+              <select class="browser-default custom-select">
+                <option selected></option>
+                <option value="1">1-Ne réponds pas aux attentes (- -)</option>
+                <option value="2 ">2-fait correctement des parties, Besoins d'amélioration (-)</option>
+                <option value="3">3- Fait correctement ses taches. Correspond aux attentes (+)</option>
+                <option value="4">4- Fait bien ses tâches et parfois les dépasse. En dessus des atentes  (++/+++)</option>
+               </select>  
+             </td>
+           </tr>
+            <tr>
+             <td rowspan="2"><h3 class="text-white mb-0">French</h3></td>
+            <td ><h4 class="text-white mb-0">clarity of oral communication<br> (communication with the team <br>leaders and with the client)</h4></td>
+              <td> <input type="text" class="form-control" id="exampleFormControlInput1" placeholder=" "></td>
+              <td class="text-right">
+                <select class="browser-default custom-select">
+                  <option selected></option>
+                  <option value="1">1-Ne réponds pas aux attentes (- -)</option>
+                  <option value="2 ">2-fait correctement des parties, Besoins d'amélioration (-)</option>
+                  <option value="3">3- Fait correctement ses taches. Correspond aux attentes (+)</option>
+                  <option value="4">4- Fait bien ses tâches et parfois les dépasse. En dessus des atentes  (++/+++)</option>
+                 </select>  
+               </td>
+              </tr>
+              <tr>
+                <td><h4 class="text-white mb-0">Clarity of written  <br>communication (Mailing/reporting…) <br>both
+                  </h4></td>
+                <td> <input type="text" class="form-control" id="exampleFormControlInput1" placeholder=" "></td>
+                <td class="text-right">
+                  <select class="browser-default custom-select">
+                    <option selected></option>
+                    <option value="1">1-Ne réponds pas aux attentes (- -)</option>
+                    <option value="2 ">2-fait correctement des parties, Besoins d'amélioration (-)</option>
+                    <option value="3">3- Fait correctement ses taches. Correspond aux attentes (+)</option>
+                    <option value="4">4- Fait bien ses tâches et parfois les dépasse. En dessus des atentes  (++/+++)</option>
+                   </select>  
+                 </td>
+               </tr>
+               </tbody>
+               </table>
+               </div>
+              </div>
+              </div>
+              </div>
+              </form>
+            </mat-step>
+                <mat-step>
+                  <ng-template matStepLabel>Attendance</ng-template>
+                  <div class="row mt-5">
+                    <div class="col">
+                      <div class="card bg-default shadow">
+                        <div class="card-header bg-transparent border-0">
+                          <h1 class="text-white mb-0">Recruitment evaluation</h1>
+                        </div>
+                        <div class="table-responsive">
+                          <table class="table align-items-center table-dark table-flush">
+                            <thead class="thead-dark">
+                              <tr>
+                                <th colspan="2" ><h2 class="text-primary">&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Indicators</h2></th>
+                                <th scope="col"><h2 class="text-primary">Criteria Weight</h2></th>
+                                <th scope="col"><h2 class="text-primary">Appreciation</h2></th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                      <td rowspan="2"><h3 class="text-white mb-0">Punctuality/Availability</h3></td>
+                                        <td><h4 class="text-white mb-0">comply with Focus' working hours<br>
+                                          be able to complete required tasks on time<br>
+                                          makes himself available if necessary to compensate a workload<br>
+                                      </h4></td>
+                                     <td> <input type="text" class="form-control" id="exampleFormControlInput1" placeholder=" "></td>
+                                    <td class="text-right">
+                                     <select class="browser-default custom-select">
+                                      <option selected ></option>
+                                      <option value="1">1-Ne réponds pas aux attentes (- -)</option>
+                                      <option value="2 ">2-fait correctement des parties, Besoins d'amélioration (-)</option>
+                                      <option value="3">3- Fait correctement ses taches. Correspond aux attentes (+)</option>
+                                      <option value="4">4- Fait bien ses tâches et parfois les dépasse. En dessus des atentes  (++/+++)</option>
+                                      </select>  
+                                      </td>
+                                    </tr>
+                                      </tbody>    
+                                      </table>
+                                      </div>
+                                      </div>
+                                      </div>
+                                      </div>
+                                      <br>
+                                      <div class="form-group">
+                                        <label for="exampleFormControlTextarea1" ><h2 class="text-primary">Comment: </h2></label>
+                                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                      </div>
+                                    <br>
+                                    <div class="text-right" >
+                                      <button type="button"    class="btn btn-primary">Save</button>
+                                    </div>
+
+
+
+
+                                   

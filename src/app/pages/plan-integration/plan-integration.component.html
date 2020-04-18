@@ -1,0 +1,508 @@
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+
+<style>
+    .a {
+        background-color: WHITESMOKE;
+        border-style: outset;
+        padding: 1em;
+    }
+    
+    .b {
+        text-decoration: underline;
+        color: blue;
+    }
+    
+    .z {
+        width: 20px;
+        height: 20px;
+    }
+    
+    .h {
+        width: 30px;
+        height: 30px;
+    }
+    
+    .marge {
+        margin-bottom: 40px;
+    }
+    
+    .image {
+        padding: 0.01mm;
+        width: 100px;
+    }
+    
+    div.bb {
+        white-space: nowrap;
+        width: 80px;
+        overflow: hidden;
+    }
+    
+    a.info {
+        position: relative;
+        color: black;
+        text-decoration: none;
+        border-bottom: 1px gray dotted;
+        /* On souligne le texte. */
+    }
+    
+    a.info span {
+        display: none;
+        /* On masque l'infobulle. */
+    }
+    
+    a.info:hover {
+        background: none;
+        /* Correction d'un bug d'Internet Explorer. */
+        z-index: 500;
+        /* On définit une valeur pour l'ordre d'affichage. */
+    }
+    
+    a.info:hover span {
+        display: inline;
+        /* On affiche l'infobulle. */
+        position: absolute;
+        white-space: nowrap;
+        /* On change la valeur de la propriété white-space pour qu'il n'y ait pas de retour à la ligne non désiré. */
+        top: 50px;
+        /* On positionne notre infobulle. */
+        left: 50px;
+        background: white;
+        color: PERU;
+        padding: 3px;
+        border: 1px solid PERU;
+        border-left: 1px solid PERU;
+    }
+    
+    .kk {
+        white-space: initial;
+    }
+    
+    .p {
+        padding-left: 550px;
+    }
+    
+    .g {
+        margin-right: 1000px;
+    }
+    
+    .s {
+        border: 3px solid rgb(255, 255, 255);
+        border-radius: 12px;
+        background-image: linear-gradient(to bottom right, #ffffff, rgb(159, 157, 185));
+    }
+</style>
+
+<link rel="stylesheet" type="text/css" href="/node_modules/primeicons/primeicons.css" />
+<link rel="stylesheet" type="text/css" href="/node_modules/primeng/resources/themes/nova-light/theme.css" />
+<link rel="stylesheet" type="text/css" href="/node_modules/primeng/resources/primeng.min.css" />
+
+<div class="header bg-default pb-8 pt-5 pt-md-8">
+    <div class="container-fluid">
+        <div class="header-body">
+            <!-- Card stats -->
+            <div class="row">
+                <div class="col-xl-3 col-lg-6">
+                    <div class="card card-stats mb-4 mb-xl-0">
+                        <div class="card-body" [routerLink]="['/dashboard']">
+                            <div class="row">
+                                <div class="col">
+                                    <h5 class="card-title text-uppercase text-muted mb-0">Integration Plan</h5>
+                                    <span class="h2 font-weight-bold mb-0">5</span>
+                                </div>
+                                <div class="col-auto">
+                                    <div class="icon icon-shape bg-danger text-white rounded-circle shadow">
+                                        <i class="fas fa-chart-bar"></i>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-6">
+                    <div class="card card-stats mb-4 mb-xl-0">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col" routerLinkActive="active" [routerLink]="['/plan-integration']">
+                                    <h5 class="card-title text-uppercase text-muted mb-0">Recruitment evaluation</h5>
+                                    <span class="h2 font-weight-bold mb-0">2</span>
+                                </div>
+                                <div class="col-auto">
+                                    <div class="icon icon-shape bg-warning text-white rounded-circle shadow">
+                                        <i class="fas fa-chart-pie"></i>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-6">
+                    <div class="card card-stats mb-4 mb-xl-0">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col">
+                                    <h5 class="card-title text-uppercase text-muted mb-0">Training evaluation</h5>
+                                    <span class="h2 font-weight-bold mb-0">9</span>
+                                </div>
+                                <div class="col-auto">
+                                    <div class="icon icon-shape bg-yellow text-white rounded-circle shadow">
+                                        <i class="fas fa-users"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-6">
+                    <div class="card card-stats mb-4 mb-xl-0">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col">
+                                    <h5 class="card-title text-uppercase text-muted mb-0">pass plan </h5>
+                                    <span class="h2 font-weight-bold mb-0">4</span>
+                                </div>
+                                <div class="col-auto">
+                                    <div class="icon icon-shape bg-info text-white rounded-circle shadow">
+                                        <i class="fas fa-percent"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid mt--7">
+    <!-- Table -->
+    <div class="row">
+        <div class="col">
+
+            <div class="col-xl-12 order-xl-1">
+                <div class="card shadow">
+                    <div class="card-header bg-white border-0">
+                        <div class="row align-items-center">
+                            <div class="col-8">
+                                <h2>INTEGRATION PLAN</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="card shadow bg-secondary">
+                            <div class="table-responsive">
+                                <div class="card-header bg-transparent pb-5">
+                                    <div class="card  bg-secondary">
+                                        <div class="card-body">
+                                            <div class="row">
+                                                <div class="col-md-2">
+                                                    <img class="image" alt="Image placeholder" src="../assets/img/theme/team-1-800x800.jpg">
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <label>
+                                                        <h2 class="heading-small text-muted mb-4"> &nbsp;&nbsp;Name:</h2>
+                                                    </label>
+                                                    <div class="col-md-3">
+                                                        <label>
+                                                            <h2> {{ userInfo.name }} </h2>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <label>
+                                                        <h2 class="heading-small text-muted mb-4"> Recruitment date</h2>
+                                                    </label>
+                                                    <div class="col-md-3">
+                                                        <label>
+                                                            <h2> {{ userInfo.recrutement }} </h2>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <label>
+                                                        <h2 class="heading-small text-muted mb-4"> &nbsp;&nbsp;Due date</h2>
+                                                    </label>
+                                                    <div class="col-md-3">
+                                                        <label>
+                                                            <h2> {{ userInfo.due }} </h2>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <br>
+                        <br>
+                        <form>
+                            <h3 class="heading-small text-muted mb-4">General required skills</h3>
+                            <div class="pl-lg-4">
+
+                                <table class="table align-items-center ">
+                                    <thead class="thead-light">
+                                        <tr style="background-color: white;">
+                                            <th scope="col" style="width: 25%;">Skill title</th>
+                                            <th scope="col" style="width: 25%;">Assigned to</th>
+                                            <th scope="col" style="width: 25%;">Description</th>
+                                            <th scope="col" style="width: 25%;">Due date</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody *ngFor="let a of amira , let i=index">
+
+                                        <tr *ngIf="this.a.categorie == 'default'">
+                                            <th scope="row">
+                                                <div class="media align-items-center">
+
+                                                    <div class="media-body">
+                                                        <span class="mb-0 text-sm">{{ this.a.title }}</span>
+                                                    </div>
+                                                </div>
+                                            </th>
+                                            <td>
+                                                <div>
+                                                    <span>{{ this.a.assignedto }}</span>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <p>
+                                                    <a href="#" class="info">
+                                                        <div class="bb">{{ this.a.description }}</div><span>
+                              <div class="kk">{{ this.a.description }}</div>
+                            </span>
+                                                    </a>
+                                                </p>
+                                            </td>
+                                            <td>
+                                                <div>
+                                                    <i class="ni ni-calendar-grid-58"></i>
+                                                    <span>{{ this.a.duedate }}</span>
+                                                </div>
+                                                &nbsp;
+                                                <div class="d-flex align-items-center">
+                                                    <span class="mr-2">60%</span>
+                                                    <div>
+                                                        <div class="progress">
+                                                            <div class="progress-bar bg-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </form>
+                        <hr class="my-4" />
+                        <div class="row">
+                            <h4 class="heading-small text-muted mb-4"> &nbsp; Assigned Skills</h4>
+                            <div class="row " class="p">
+                                <ul>
+                                    <li class="nav-item" ngbDropdown>
+                                        <a class="text-right" class="nav-link pr-0" role="button" ngbDropdownToggle>
+                                            <button placement="bottom-right" class="text-right" class="btn btn-default">+</button>
+                                        </a>
+                                        <div class="dropdown-menu-arrow dropdown-menu-right" ngbDropdownMenu>
+                                            <a class="dropdown-item" [routerLink]="['/templates']" [queryParams]="{selection: true, userId: userInfo.id}">Profil template</a>
+                                            <a class="dropdown-item">Project template </a>
+                                            <a class="dropdown-item" routerLinkActive="active" [routerLink]="['/task-create']" [queryParams]="{selectionn: true , userId: userInfo.id}">custom </a>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                            <div>
+                                <button (click)="toggle()" id="bt" class="btn btn-default"><i class="fa fa-eye"></i> {{buttonName}}
+                                </button>
+                            </div>
+
+                        </div>
+                    </div>
+                    <ng-container *ngIf="!show">
+                        <div class="card-container">
+                            <div class="row  mt--2" cdkDropList (cdkDropListDropped)="drop($event)">
+                                <div class="col-xl-3 col-lg-3" *ngFor="let plan of assignedTasks.tasks" cdkDrag>
+                                    <br>
+                                    <div>
+                                        <div class="card ">
+                                            <div class="text-right" data-toggle="modal" data-target="#modalConfirmDelete">
+                                                <div class="modal fade" id="modalConfirmDelete" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                    <div class="modal-dialog modal-sm modal-notify modal-danger" style="color: cornsilk;" role="document">
+                                                        <div class="modal-content text-center">
+                                                            <div class="modal-header d-flex justify-content-center">
+                                                                <p class="heading">Are you sure?</p>
+                                                            </div>
+                                                            <div class="modal-body">
+                                                                <i class="fas fa-times fa-4x animated rotateIn"></i>
+                                                            </div>
+                                                            <div class="modal-footer flex-center">
+                                                                <a (click)="delete(plan)" class="btn  btn-danger">Yes</a>
+                                                                <a type="button" class="btn  btn-danger waves-effect" data-dismiss="modal">No</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <img alt="Image placeholder" src="../assets/img/theme/trash.png">
+                                            </div>
+                                            <div class="card-content">
+                                                <h1>{{plan.title}}</h1>
+                                            </div>
+                                            <div class="card-footer" routerLinkActive="active" [routerLink]="['/details']" [queryParams]="{selection: true , userId: userInfo.id, taskId: plan.id}">
+                                                Details >>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </ng-container>
+                    <ng-container *ngIf="show">
+                        <div style="padding: 10px;" class="text-left">
+                            <button style="border-radius: 200%; " class="master-button  btn" [style.background]="this.color" (click)="toggleColor()" (click)="isCollapsed = !isCollapsed" [attr.aria-expanded]="!isCollapsed" aria-controls="collapseExample" type="button ">
+                                <mdb-icon fas="" icon="angle-down  text-white" class="fas"><i class="fa-angle-down fas "></i></mdb-icon>
+                            </button>
+                        </div>
+                        <div cdkDropList (cdkDropListDropped)="drop($event)">
+                            <div _ngcontent-serverapp-c6="" class="col-md-12 mx-auto text-center mt-5">
+                                <div _ngcontent-serverapp-c6="" class="row bg-white">
+                                    <table *ngFor="let plan of assignedTasks.tasks " _ngcontent-serverapp-c6="" class="z-depth-1 table table-striped" mdbtable="" striped="true">
+                                        <thead _ngcontent-serverapp-c6="">
+                                        </thead>
+                                        <tbody _ngcontent-serverapp-c6="" mdbtablecol="">
+                                            <tr _ngcontent-serverapp-c6="" cdkDrag>
+                                                <td _ngcontent-serverapp-c6="" scope="row">
+                                                    <div class="text-left" class="row ">
+                                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                        <i class="material-icons"> &#xE315;</i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                        <h2>   {{plan.title}}</h2>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr id="collapseExample" [ngbCollapse]="isCollapsed" style="text-align: center; background-color: rgba(0, 0, 0,  0.015)">
+                                                <td colspan="100%" style="border: 0 !important">
+                                                    <table mdbtable="" class="table">
+                                                        <thead class="bg-default white-text">
+                                                            <tr>
+                                                                <b>   <th  scope="col"> Title </th></b>
+                                                                <th scope="col"> Description </th>
+                                                                <th scope="col"> Assigned to </th>
+                                                                <th scope="col"> priority </th>
+                                                                <th scope="col"> status </th>
+                                                                <th scope="col"> Action </th>
+                                                            </tr>
+                                                        </thead>
+                                                        <!---->
+                                                        <tbody _ngcontent-serverapp-c6="" cdkDropList (cdkDropListDropped)="dropp($event)">
+                                                            <tr cdkDrag style="background-color: #ffffff;" *ngFor="let sub of plan.subtasks" _ngcontent-serverapp-c6="">
+                                                                <h1> <td _ngcontent-serverapp-c4="" style="color: rgb(56, 135, 199);" > <b> {{sub.titlesub}} </b></td> </h1>
+                                                                <td _ngcontent-serverapp-c4="">{{sub.descriptionsub}}</td>
+                                                                <td _ngcontent-serverapp-c6="">
+                                                                    {{sub.assigned}}
+                                                                </td>
+                                                                <td _ngcontent-serverapp-c6="">
+                                                                    {{sub.priority}}
+                                                                </td>
+                                                                <td _ngcontent-serverapp-c6="">
+                                                                    <h4 class="badge badge-pill badge-danger">{{sub.statusub}}</h4>                               
+                                                                </td>
+                                                                <td>
+                                                                    <a class="settings" (click)="openModal(sub, plan)" title="Settings" data-toggle="tooltip" data-toggle="modal" data-target="#exampleModal" (click)="openEditModal(sTask)"><i class="material-icons" style="color: rgb(56, 135, 199);">&#xE3C9;</i></a>
+                                                                    <a href="#" class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons" style="color:rgb(56, 135, 199);">&#xE5C9;</i></a>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </ng-container>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modals -->
+
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <form [formGroup]="editSubForm" (ngSubmit)="onSubmitEdit()">
+            <div class="modal-content">
+                <div class="modal-header">
+                </div>
+                <div class="modal-body">
+                    <h4 class="heading-small text-muted mb-4">Skill</h4>
+                    <div class="pl-lg-4">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="form-group">
+                                    <label class="form-control-label" for="input-username">Title</label>
+                                    <input type="text" formControlName="title" name="title" id="input-username" class="form-control form-control-alternative" placeholder="Title">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="form-group">
+                                    <label class="form-control-label" for="input-first-name">Description</label>
+                                    <angular-editor formControlName="description" name="description" [config]="editorConfig" id="description"></angular-editor>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="form-group">
+                                    <label class="form-control-label" for="input-username">Assigned to</label>
+                                    <select class="form-control form-control-alternative" placeholder="assigned" formControlName="assigned" name="assigned" class="browser-default custom-select">
+                                        <option selected value="Me">Me</option>
+                                        <option value="Amira ghozzi">Amira ghozzi</option>
+                                        <option value="Refka hamzaoui">Refka hamzaoui </option>
+                                        <option value="Hythem el abber">Hythem el abber </option>
+                                        <option value="Emna ben brahim">Emna ben brahim </option>
+                                        <option value="Yosra">Yosra </option>
+                                        <option value="Chaima">Chaima </option>
+                                        <option value="External">External </option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-lg-12">
+                                <div class="form-group">
+                                    <label class="form-control-label" for="input-username">Priority</label>
+                                    <select class="form-control form-control-alternative" placeholder="priority" formControlName="priority" name="priority" class="browser-default custom-select">
+                                        <option selected value="Medium">Medium</option>
+                                        <option value="High">High</option>
+                                        <option value="Low">Low</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-12">
+                                <div class="form-group">
+                                    <label class="form-control-label" for="input-username">status</label>
+                                    <select class="form-control form-control-alternative" placeholder="Status" formControlName="status" name="status" class="browser-default custom-select">
+                                        <option selected value="Open">open</option>
+                                        <option value="In procss">In procss</option>
+                                        <option value="Done">done</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn  btn-default float-right" data-dismiss="modal">Close</button>
+                    <button type="submit" class="btn  btn-default float-right"> <i class="fa fa-edit"></i>Update</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

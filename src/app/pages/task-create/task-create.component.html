@@ -1,0 +1,637 @@
+
+
+<div class="header bg-default pb-8 pt-5 pt-md-8" color>
+  <div class="container-fluid">
+      <div class="header-body">
+        <!-- Card stats -->
+        <div class="row">
+          <div class="col-xl-3 col-lg-6">
+            <div class="card card-stats mb-4 mb-xl-0">
+              <div class="card-body">
+                <div class="row">
+                  <div class="col">
+                    <h5 class="card-title text-uppercase text-muted mb-0" >Integration Plan</h5>
+                    <span class="h2 font-weight-bold mb-0">5</span>
+                    
+                  </div>
+                  <div class="col-auto">
+                    <div class="icon icon-shape bg-danger text-white rounded-circle shadow">
+                      <i class="fas fa-chart-bar"></i>
+                    </div>
+                  </div>
+                </div>
+               
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-3 col-lg-6">
+            <div class="card card-stats mb-4 mb-xl-0">
+              <div class="card-body">
+                <div class="row">
+                  <div class="col">
+                    <h5 class="card-title text-uppercase text-muted mb-0">Signing <br>Plan</h5>
+                    <span class="h2 font-weight-bold mb-0">2</span>
+                  </div>
+                  <div class="col-auto">
+                    <div class="icon icon-shape bg-warning text-white rounded-circle shadow">
+                      <i class="fas fa-chart-pie"></i>
+                    </div>
+                  </div>
+                </div>
+               
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-3 col-lg-6">
+            <div class="card card-stats mb-4 mb-xl-0">
+              <div class="card-body">
+                <div class="row">
+                  <div class="col">
+                    <h5 class="card-title text-uppercase text-muted mb-0">Evaluation Training</h5>
+                    <span class="h2 font-weight-bold mb-0">9</span>
+                  </div>
+                  <div class="col-auto">
+                    <div class="icon icon-shape bg-yellow text-white rounded-circle shadow">
+                      <i class="fas fa-users"></i>
+                    </div>
+                  </div>
+                </div>
+                
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-3 col-lg-6">
+            <div class="card card-stats mb-4 mb-xl-0">
+              <div class="card-body">
+                <div class="row">
+                  <div class="col">
+                    <h5 class="card-title text-uppercase text-muted mb-0">Evaluation Recrutement</h5>
+                    <span class="h2 font-weight-bold mb-0">4</span>
+                  </div>
+                  <div class="col-auto">
+                    <div class="icon icon-shape bg-info text-white rounded-circle shadow">
+                      <i class="fas fa-percent"></i>
+                    </div>
+                  </div>
+                </div>
+               
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+<!-- Page content -->
+<!--div class="container-fluid mt--7">
+  <div class="row">
+    <div class="col">
+      <div class="card shadow">
+        <div class="card-header border-0" style="background-color:rgb(235, 235, 243)">
+          <span class="text-warning font-weight-900" style="font-size: 160%">Add new Task</span>                             
+
+          <div class="col-xl-12 order-xl-12 mt-4 mb-xl-4 mt--0 " >
+            <div class="card card-profile shadow">
+              <div class="card-header text-center border-2 pt-8 pt-md-4 pb-6 pb-md-4">
+               
+               
+              </div>
+          <div class="col-md-12 user-container">
+            <form [formGroup]="addForm" (ngSubmit)="onSubmit()" *ngIf="!selectionn">
+              <div class="form-group">
+                <span class="text-warning font-weight-900">Title</span>                             
+                <input type="text" formControlName="title" placeholder="title" name="title" class="form-control" id="title">
+              </div>
+              <div class="form-group">
+                <span class="text-warning font-weight-900">Description</span>                             
+
+                <angular-editor  formControlName="description" [config]="editorConfig"></angular-editor>
+              </div>
+              <div formGroupeName="subtasks">
+              <div class="form-group">
+              <span class="text-warning font-weight-900">Title</span>                             
+              <input type="text" formControlName="titlesub" placeholder="title" name="titlesub" class="form-control">
+              </div>
+              
+              <div class="form-group">
+                <span class="text-warning font-weight-900">Description</span>                             
+
+                <angular-editor  formControlName="descriptionsub" [config]="editorConfig"></angular-editor>
+              </div>
+            </div>
+               <div class="container">
+                <div class="row">
+                  
+                </div>
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="col-auto float-right">
+                     
+                    </div>
+                    
+                    <br >
+                    <div class="table-responsive">
+                      <table id="mytable" class="table table-bordred table-striped">
+                        <thead>
+                          <th>Title</th>
+                          <th>Description</th>
+                          
+                          
+                        </thead>
+                        <tbody >
+                          
+                        
+                            
+                          
+                           
+                         
+                        </tbody>
+                      </table>
+              
+                   
+                  </div>
+                </div>
+              </div>
+
+              
+
+
+              </div>
+
+              <button class="btn btn-warning float-right">Save</button>
+            </form>
+
+            <form [formGroup]="addForm" (ngSubmit)="onSave()"  *ngIf="selectionn"  >
+              <div class="form-group">
+                <span class="text-warning font-weight-900">Title</span>                             
+                <input type="text" formControlName="title" placeholder="title" name="title" class="form-control" id="title">
+              </div>
+              <div class="form-group">
+                <span class="text-warning font-weight-900">Description</span>                             
+
+                <angular-editor  formControlName="description" [config]="editorConfig"></angular-editor>
+              </div>
+              <div formGroupeName="subtasks">
+              <div class="form-group">
+              <span class="text-warning font-weight-900">Title</span>                             
+              <input type="text" formControlName="titlesub" placeholder="title" name="titlesub" class="form-control">
+              </div>
+              
+              <div class="form-group">
+                <span class="text-warning font-weight-900">Description</span>                             
+
+                <angular-editor  formControlName="descriptionsub" [config]="editorConfig"></angular-editor>
+              </div>
+            </div>
+               <div class="container">
+                <div class="row">
+                  
+                </div>
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="col-auto float-right">
+                     
+                    </div>
+                    
+                    <br >
+                    <div class="table-responsive">
+                      <table id="mytable" class="table table-bordred table-striped">
+                        <thead>
+                          <th>Title</th>
+                          <th>Description</th>
+                          
+                          
+                        </thead>
+                        <tbody >
+                          
+                        
+                            
+                          
+                           
+                         
+                        </tbody>
+                      </table>
+              
+                   
+                  </div>
+                </div>
+              </div>
+
+              
+
+
+              </div>
+
+              <button class="btn btn-warning float-right">Save</button>
+            </form>
+          </div></div></div></div></div></div></div></div-->
+
+
+
+
+
+
+
+
+
+
+
+          <div class="container-fluid mt--7">
+            <!-- Table -->
+            <div class="row">
+              <div class="col">
+                
+          
+                    <div class="col-xl-12 order-xl-1">
+                      <div class="card bg-secondary shadow">
+                        <div class="card-header bg-white border-0">
+                          <div class="row align-items-center">
+                            <div class="col-8">
+                              <h2>ADD TEMPLATE</h2>                 
+                             </div>
+          
+                          </div>
+                        </div>
+                        <div class="card-body">
+                          <form [formGroup]="addForm" (ngSubmit)="onSubmit()"   *ngIf="!selectionn">
+                            <h4 class="heading-small text-muted mb-4">Skill</h4>
+                            <div class="pl-lg-4">
+                              <div class="row">
+                                <div class="col-lg-6">
+                                  <div class="form-group">
+                                    <label class="form-control-label" for="input-username" [(ngModel)]="title">Title</label>
+                                    <input type="text" formControlName="title"  name="title" id="input-username" class="form-control form-control-alternative" placeholder="Title" >
+                                  </div>
+                                </div>
+                                <div class="col-lg-6">
+                                  <div class="form-group">
+                                    <label class="form-control-label" for="input-email">Type</label>
+          <br>
+          <select class="form-control" id="exampleFormControlSelect1">
+            <option>Default template</option>
+            <option>Profil template</option>
+            <option>Project template</option>
+            
+          </select>
+                                                                                  </div>
+                                </div>
+                              </div>
+                              <div class="row">
+                                <div class="col-lg-12">
+                                  <div class="form-group">
+                                    <label class="form-control-label" for="input-first-name">Description</label>
+                                    <angular-editor formControlName="description" name="description" [(ngModel)]="description"
+                                    [config]="editorConfig" id="descriptionsub"></angular-editor>                        </div>
+                                </div>
+                               
+                              </div>
+                            </div>
+          
+                            <hr class="my-4" />
+                            <!-- Address -->
+                           
+                             
+                                <h4 class="heading-small text-muted mb-4">Tags</h4>   
+                             
+                              
+                                <!--div class="pl-lg-4">
+                                  <div class="row">
+                                    <div class="col-lg-6">
+                                      <div class="form-group">
+                         
+                                        <div class="col-xl-18 order-xl-16">
+                                <mat-form-field class="multiple-items"  >
+                                  <mat-chip-list #chipList>
+                                    <mat-chip  formGroupName="tags"  *ngFor="let subjectArray of tags" [selectable]="selectable" [removable]="removable"
+                                      (removed)="remove(subjectArray)">
+                                      
+                                        
+                                        {{subjectArray.tag}}
+                                   
+                                      <mat-icon matChipRemove *ngIf="removable">cancel</mat-icon>
+                                    </mat-chip>
+                                    <input placeholder="Add tag" [matChipInputFor]="chipList"
+                                      [matChipInputSeparatorKeyCodes]="separatorKeysCodes" [matChipInputAddOnBlur]="addOnBlur"
+                                      (matChipInputTokenEnd)="add($event)">
+                                    
+                                  </mat-chip-list>
+                                 
+                                </mat-form-field>                   
+                            </div></div>
+          </div></div></div-->
+                            <hr class="my-4" />
+                            <!-- Address -->
+                            <div class="row align-items-center">
+                              <div class="col-8">
+                                <h4 class="heading-small text-muted mb-4">SubSkills</h4>                    </div>
+                              <div class="col-4 text-right">
+                                <a  class="btn btn-sm btn-default" (click)="addSkillButtonClick()">Add New</a>
+                              </div>
+                            </div>
+                            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
+                              aria-labelledby="exampleModalLabel" aria-hidden="true">
+                              <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                  <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                      <span aria-hidden="true">&times;</span>
+                                    </button>
+                                  </div>
+                                  <div formGroupName="subtasks"
+                                    *ngFor="let skill of addForm.get('subtasks')['controls']; let i = index">
+                                    <div [formGroupName]="i">
+                                      <div class="modal-body">
+          
+                                        <div class="form-group">
+                                          <!-- app.component.html -->
+                                          <label for="">Title</label>
+                                          <input type="text" formControlName="titlesub" [(ngModel)]="name" placeholder="title"
+                                            name="titlesub" class="form-control" id="titlesub">
+                                          <!-- app.component.html -->
+                                        </div>
+          
+                                        <div class="form-group">
+                                          <label for="">Description</label>
+          
+                                          <angular-editor formControlName="descriptionsub" [(ngModel)]="age"
+                                            [config]="editorConfig" id="descriptionsub"></angular-editor>
+                                        </div>
+          
+          
+                                      </div>
+          
+                                      <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                        <button type="button" class="btn btn-primary" data-dismiss="modal"
+                                          (click)="resetForm()">Save changes</button>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="pl-lg-4">
+                              <div class="row">
+                                <div class="col-md-12">
+                                  <div class="form-group">
+                                    <div formGroupName="subtasks"
+                                    *ngFor="let skill of addForm.get('subtasks')['controls']; let i = index">
+                                    <div [formGroupName]="i">
+                                      
+          
+                                        <div class="form-group">
+                                          <!-- app.component.html -->
+                                          <label for="">Title</label>
+                                          <input type="text" formControlName="titlesub"  placeholder="title"
+                                            name="titlesub" class="form-control" id="titlesub">
+                                          <!-- app.component.html -->
+                                        </div>
+          
+                                        <div class="form-group">
+                                          <label for="">Description</label>
+          
+                                          <angular-editor formControlName="descriptionsub" 
+                                            [config]="editorConfig" id="descriptionsub"></angular-editor>
+                                        </div>
+          
+          
+                                      
+          
+                                     
+                                    </div>
+                                  </div>
+          
+          
+          
+          
+          
+                                  </div>
+                                </div>
+                              </div>
+                             
+                            </div>
+                            <div class="pl-lg-4">
+                              <div class="row">
+                                <div class="col-md-12">
+                                  <div class="form-group">
+                                    </div>
+                                    </div>
+                                    </div>
+                                    </div>
+                            
+                            <!-- Description -->
+                            
+                            <button type="button" class="btn btn-default float-right" type="submit">Save</button>
+                          </form>
+
+
+
+
+
+
+
+
+
+
+                          <form [formGroup]="addForm" (ngSubmit)="onSave()"   *ngIf="selectionn">
+                            <h4 class="heading-small text-muted mb-4">Skill</h4>
+                            <div class="pl-lg-4">
+                              <div class="row">
+                                <div class="col-lg-6">
+                                  <div class="form-group">
+                                    <label class="form-control-label" for="input-username" [(ngModel)]="title">Title</label>
+                                    <input type="text" formControlName="title"  name="title" id="input-username" class="form-control form-control-alternative" placeholder="Title" >
+                                  </div>
+                                </div>
+                                <div class="col-lg-6">
+                                  <div class="form-group">
+                                    <label class="form-control-label" for="input-email"  >Type</label>
+          <br>
+          <select class="form-control" id="exampleFormControlSelect1" disabled>
+            <option></option>
+            <option></option>
+            <option></option>
+            
+          </select>
+                                                                                  </div>
+                                </div>
+                              </div>
+                              <div class="row">
+                                <div class="col-lg-12">
+                                  <div class="form-group">
+                                    <label class="form-control-label" for="input-first-name">Description</label>
+                                    <angular-editor formControlName="description" name="description" [(ngModel)]="description"
+                                    [config]="editorConfig" id="descriptionsub"></angular-editor>                        </div>
+                                </div>
+                               
+                              </div>
+                            </div>
+          
+                            <hr class="my-4" />
+                            <!-- Address -->
+                           
+                             
+                                <h4 class="heading-small text-muted mb-4">Tags</h4>   
+                             
+                   
+                    
+                                <div class="pl-lg-4">
+                                  <div class="row">
+                                    <div class="col-lg-6">
+                                      <div class="form-group">
+                         
+                                        <div class="col-xl-18 order-xl-16">
+                                <mat-form-field class="multiple-items"  >
+                                  <mat-chip-list #chipList>
+                                    <mat-chip  formGroupName="tags"  *ngFor="let subjectArray of tags" [selectable]="selectable" [removable]="removable"
+                                      (removed)="remove(subjectArray)">
+                                      
+                                        
+                                        {{subjectArray.tag}}
+                                   
+                                      <mat-icon matChipRemove *ngIf="removable">cancel</mat-icon>
+                                    </mat-chip>
+                                    <input placeholder="Add tag" [matChipInputFor]="chipList"
+                                      [matChipInputSeparatorKeyCodes]="separatorKeysCodes" [matChipInputAddOnBlur]="addOnBlur"
+                                      (matChipInputTokenEnd)="add($event)">
+                                    
+                                  </mat-chip-list>
+                                 
+                                </mat-form-field>                   
+                            </div></div>
+          </div></div></div>
+                                <!--div class="pl-lg-4">
+                                  <div class="row">
+                                    <div class="col-lg-6">
+                                      <div class="form-group">
+                         
+                                        <div class="col-xl-18 order-xl-16">
+                                <mat-form-field class="multiple-items"  >
+                                  <mat-chip-list #chipList>
+                                    <mat-chip  formGroupName="tags"  *ngFor="let subjectArray of tags" [selectable]="selectable" [removable]="removable"
+                                      (removed)="remove(subjectArray)">
+                                      
+                                        
+                                        {{subjectArray.tag}}
+                                   
+                                      <mat-icon matChipRemove *ngIf="removable">cancel</mat-icon>
+                                    </mat-chip>
+                                    <input placeholder="Add tag" [matChipInputFor]="chipList"
+                                      [matChipInputSeparatorKeyCodes]="separatorKeysCodes" [matChipInputAddOnBlur]="addOnBlur"
+                                      (matChipInputTokenEnd)="add($event)">
+                                    
+                                  </mat-chip-list>
+                                 
+                                </mat-form-field>                   
+                            </div></div>
+          </div></div></div-->
+                            <hr class="my-4" />
+                            <!-- Address -->
+                            <div class="row align-items-center">
+                              <div class="col-8">
+                                <h4 class="heading-small text-muted mb-4">SubSkills</h4>                    </div>
+                              <div class="col-4 text-right">
+                                <a  class="btn btn-sm btn-default" (click)="addSkillButtonClick()">Add New</a>
+                              </div>
+                            </div>
+                            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
+                              aria-labelledby="exampleModalLabel" aria-hidden="true">
+                              <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                  <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                      <span aria-hidden="true">&times;</span>
+                                    </button>
+                                  </div>
+                                  <div formGroupName="subtasks"
+                                    *ngFor="let skill of addForm.get('subtasks')['controls']; let i = index">
+                                    <div [formGroupName]="i">
+                                      <div class="modal-body">
+          
+                                        <div class="form-group">
+                                          <!-- app.component.html -->
+                                          <label for="">Title</label>
+                                          <input type="text" formControlName="titlesub" [(ngModel)]="name" placeholder="title"
+                                            name="titlesub" class="form-control" id="titlesub">
+                                          <!-- app.component.html -->
+                                        </div>
+          
+                                        <div class="form-group">
+                                          <label for="">Description</label>
+          
+                                          <angular-editor formControlName="descriptionsub" [(ngModel)]="age"
+                                            [config]="editorConfig" id="descriptionsub"></angular-editor>
+                                        </div>
+          
+          
+                                      </div>
+          
+                                      <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                        <button type="button" class="btn btn-primary" data-dismiss="modal"
+                                          (click)="resetForm()">Save changes</button>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="pl-lg-4">
+                              <div class="row">
+                                <div class="col-md-12">
+                                  <div class="form-group">
+                                    <div formGroupName="subtasks"
+                                    *ngFor="let skill of addForm.get('subtasks')['controls']; let i = index">
+                                    <div [formGroupName]="i">
+                                      
+          
+                                        <div class="form-group">
+                                          <!-- app.component.html -->
+                                          <label for="">Title</label>
+                                          <input type="text" formControlName="titlesub"  placeholder="title"
+                                            name="titlesub" class="form-control" id="titlesub">
+                                          <!-- app.component.html -->
+                                        </div>
+          
+                                        <div class="form-group">
+                                          <label for="">Description</label>
+          
+                                          <angular-editor formControlName="descriptionsub" 
+                                            [config]="editorConfig" id="descriptionsub"></angular-editor>
+                                        </div>
+          
+          
+                                      
+          
+                                     
+                                    </div>
+                                  </div>
+          
+          
+          
+          
+          
+                                  </div>
+                                </div>
+                              </div>
+                             
+                            </div>
+                            <div class="pl-lg-4">
+                              <div class="row">
+                                <div class="col-md-12">
+                                  <div class="form-group">
+                                    </div>
+                                    </div>
+                                    </div>
+                                    </div>
+                            
+                            <!-- Description -->
+                            
+                            <button type="button" class="btn btn-default float-right" type="submit">Save</button>
+                          </form>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>

@@ -1,0 +1,308 @@
+<style>
+  .z {
+     width:20px;
+     height:20px;
+   }
+   .p {
+  padding: 20px;
+}
+
+</style>
+
+
+
+
+<div class="header bg-default pb-8 pt-5 pt-md-8" color>
+  <div class="container-fluid">
+      <div class="header-body">
+        <!-- Card stats -->
+        <div class="row">
+          <div class="col-xl-3 col-lg-6">
+            <div class="card card-stats mb-4 mb-xl-0">
+              <div class="card-body"  [routerLink]="['/dashboard']">
+                <div class="row">
+                  <div class="col">
+                    <h5 class="card-title text-uppercase text-muted mb-0" >Integration Plan</h5>
+                    <span class="h2 font-weight-bold mb-0">5</span>
+                    
+                  </div>
+                  <div class="col-auto">
+                    <div class="icon icon-shape bg-danger text-white rounded-circle shadow">
+                      <i class="fas fa-chart-bar"></i>
+                    </div>
+                  </div>
+                </div>
+               
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-3 col-lg-6">
+            <div class="card card-stats mb-4 mb-xl-0">
+              <div class="card-body">
+                <div class="row">
+                  <div class="col">
+                    <h5 class="card-title text-uppercase text-muted mb-0">Signing Plan</h5>
+                    <span class="h2 font-weight-bold mb-0">2</span>
+                  </div>
+                  <div class="col-auto">
+                    <div class="icon icon-shape bg-warning text-white rounded-circle shadow">
+                      <i class="fas fa-chart-pie"></i>
+                    </div>
+                  </div>
+                </div>
+               
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-3 col-lg-6">
+            <div class="card card-stats mb-4 mb-xl-0">
+              <div class="card-body">
+                <div class="row">
+                  <div class="col">
+                    <h5 class="card-title text-uppercase text-muted mb-0">Evaluation Training</h5>
+                    <span class="h2 font-weight-bold mb-0">9</span>
+                  </div>
+                  <div class="col-auto">
+                    <div class="icon icon-shape bg-yellow text-white rounded-circle shadow">
+                      <i class="fas fa-users"></i>
+                    </div>
+                  </div>
+                </div>
+                
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-3 col-lg-6">
+            <div class="card card-stats mb-4 mb-xl-0">
+              <div class="card-body">
+                <div class="row">
+                  <div class="col">
+                    <h5 class="card-title text-uppercase text-muted mb-0">Evaluation Recrutement</h5>
+                    <span class="h2 font-weight-bold mb-0">4</span>
+                  </div>
+                  <div class="col-auto">
+                    <div class="icon icon-shape bg-info text-white rounded-circle shadow">
+                      <i class="fas fa-percent"></i>
+                    </div>
+                  </div>
+                </div>
+               
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+<div class="container-fluid mt--7">
+  <div class="row">
+    <div class="col">
+      
+
+          <div class="col-xl-12 order-xl-8">
+            <div class="card bg-secondary shadow">
+              <div class="card-header bg-white border-0">
+                <div class="row align-items-center">
+                  
+                  <div class="col-8">
+                   <b> <h2> TEMPLATES</h2></b>
+                  </div>
+                  
+                  <div class="col-4 text-right">
+                      <img alt="Image placeholder" src="../assets/img/theme/add (2).png" routerLinkActive="active" [routerLink]="['/task-create']">  
+                      </div>
+
+                      
+
+
+
+
+                      <div class="col-4 " style="margin-right: 100px;">
+
+                        <form class="form-inline d-flex justify-content-right md-form form-sm  mt-2 float-right">
+                          <input name="searchString" _ngcontent-syb-c106="" placeholder="Type to search..." type="text" class="form-control"  [(ngModel)]="searchText" class="form-control form-control-sm mr-3 w-90" type="text" placeholder="Search Text"
+                            aria-label="Search" style="color:MIDNIGHTBLUE ;">
+                          <i class="fas fa-search" aria-hidden="true" style="color:MIDNIGHTBLUE;"></i>
+                        </form>
+                      </div>
+                      <!--div class="col-3 ">
+                      <mat-form-field class="multiple-items float-right" style="margin-right: 60px;" >
+                        <mat-chip-list #chipList>
+                          <mat-chip  formGroupName="tags"  *ngFor="let subjectArray of tags" [selectable]="selectable" [removable]="removable"
+                            (removed)="remove(subjectArray)">
+                            
+                              
+                              {{subjectArray.tag}}
+                         
+                            <mat-icon matChipRemove *ngIf="removable">cancel</mat-icon>
+                          </mat-chip>
+                          <input placeholder="Filter by tag" [matChipInputFor]="chipList"
+                            [matChipInputSeparatorKeyCodes]="separatorKeysCodes" [matChipInputAddOnBlur]="addOnBlur"
+                            (matChipInputTokenEnd)="add($event)">
+                          
+                        </mat-chip-list>
+                       
+                      </mat-form-field> 
+                      </div-->
+                    
+                    
+                      <div class="col-3 float-right">
+                          
+                          <select class="form-control" id="categorie" formControlName="categorie" name="categorie" >
+  
+                            <option disabled selected hidden>Filter by category </option>
+                            <option>Technical skills</option>
+                            <option>Soft skills</option>
+        
+                          </select>
+                       
+                      
+  
+                    </div>
+
+
+
+
+
+
+
+
+                      
+
+                  </div>
+                 
+                  <div class="text-right">
+                    <a href="javascript:void(0)" class="btn  btn-default float-right" *ngIf="selection"  (click)="onSave()" ><i class="fa fa-download"></i> Import</a>
+                   </div>
+                   
+
+                </div>
+                
+               
+
+ <mat-tab-group mat-align-tabs="center"> 
+ 
+                    <mat-tab > 
+                      <ng-template mat-tab-label>
+                        <mat-icon class="example-tab-icon">account_circle</mat-icon>
+                        Profile template
+                      </ng-template>
+                  <div class="col-lg-12" >
+                  
+                    
+                      <br>
+
+<div   class="card-container" >
+<div class="row  mt--2">
+  <div    class="col-xl-3 col-lg-3" *ngFor="let plan of tasks | filter : searchText" >
+
+
+    <div class= "p" >
+
+    <div class="card"   >
+    <div class ="text-left" >
+      <input  class="z" type ="checkbox" *ngIf="selection" (change)="onChange($event.target.checked, plan)">
+  </div>
+ 
+  
+
+  <div class="text-right" style="margin-right: 15px;margin-top: 15px"   data-toggle="modal" data-target="#myModal">
+
+    <div id="myModal" class="modal fade" data-backdrop="false">
+      <div class="modal-dialog modal-confirm">
+        <div class="modal-content">
+          <div class="modal-header">
+            <div class="icon-box">
+              <i class="material-icons">&#xE5CD;</i>
+            </div>        
+            <h4 class="modal-title">Are you sure?</h4>  
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          </div>
+          <div class="modal-body">
+            <p>Do you really want to delete these template? This process cannot be undone.</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-info" data-dismiss="modal">Cancel</button>
+            <button type="button" class="btn btn-danger" (click)="delete(plan)">Delete</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+<!--Modal: modalCoupon-->
+  
+<!--Modal: modalCoupon-->
+
+<!--Section: Live preview-->
+    <img alt="Image placeholder" src="../assets/img/theme/trash.png" > 
+     </div>
+     
+    
+    
+
+    
+    <div class="card-content">
+      <h1>{{plan.title}}</h1>
+    </div>
+    
+    <div class="card-footer" (click)="editUser(plan)">
+        Details >>
+    </div>
+  </div>
+  
+  </div>
+
+</div>
+</div>
+
+
+                </div>
+                  </div>
+                  </mat-tab>
+
+                  <mat-tab > 
+                    <ng-template mat-tab-label>
+                      <mat-icon class="example-tab-icon">assignment_turned_in</mat-icon>
+                      Profile template
+                    </ng-template>
+                  </mat-tab>
+                  <mat-tab > 
+                    <ng-template mat-tab-label>
+                      <mat-icon class="example-tab-icon"> exit_to_app</mat-icon>
+                      onboarding template
+                    </ng-template>
+                    </mat-tab>
+
+                </mat-tab-group>
+
+
+
+
+
+
+                
+
+              </div>
+
+              </div></div>
+
+
+    </div>
+  </div >
+       
+        
+    
+
+  
+
+
+
+
+
+
+
+
+
+  
+  
+  

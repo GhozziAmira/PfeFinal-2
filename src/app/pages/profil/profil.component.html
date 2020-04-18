@@ -1,0 +1,142 @@
+
+<style>
+  .z {
+  width:20px;
+  height:20px;
+}
+</style>
+<div class="header bg-default  pb-8 pt-5 pt-md-8" color>
+  <div class="container-fluid">
+      <div class="header-body">
+        <!-- Card stats -->
+        <div class="row">
+          <div class="col-xl-3 col-lg-6">
+            <div class="card card-stats mb-4 mb-xl-0">
+              <div class="card-body">
+                <div class="row">
+                  <div class="col">
+                    <h5 class="card-title text-uppercase text-muted mb-0">Integration Plan</h5>
+                    <span class="h2 font-weight-bold mb-0">5</span>
+                  </div>
+                  <div class="col-auto">
+                    <div class="icon icon-shape bg-danger text-white rounded-circle shadow">
+                      <i class="fas fa-chart-bar"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-3 col-lg-6">
+            <div class="card card-stats mb-4 mb-xl-0">
+              <div class="card-body">
+                <div class="row">
+                  <div class="col">
+                    <h5 class="card-title text-uppercase text-muted mb-0">Recruitment evaluation
+                      </h5>
+                    <span class="h2 font-weight-bold mb-0">2</span>
+                  </div>
+                  <div class="col-auto">
+                    <div class="icon icon-shape bg-warning text-white rounded-circle shadow">
+                      <i class="fas fa-chart-pie"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-3 col-lg-6">
+            <div class="card card-stats mb-4 mb-xl-0">
+              <div class="card-body">
+                <div class="row">
+                  <div class="col">
+                    <h5 class="card-title text-uppercase text-muted mb-0">Training evaluation
+                    </h5>
+                    <span class="h2 font-weight-bold mb-0">9</span>
+                  </div>
+                  <div class="col-auto">
+                    <div class="icon icon-shape bg-yellow text-white rounded-circle shadow">
+                      <i class="fas fa-users"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-3 col-lg-6">
+            <div class="card card-stats mb-4 mb-xl-0">
+              <div class="card-body">
+                <div class="row">
+                  <div class="col">
+                    <h5 class="card-title text-uppercase text-muted mb-0">pass Evaluation</h5>
+                    <span class="h2 font-weight-bold mb-0">4</span>
+                  </div>
+                  <div class="col-auto">
+                    <div class="icon icon-shape bg-info text-white rounded-circle shadow">
+                      <i class="fas fa-percent"></i>
+                    </div>
+                  </div>
+                </div>
+               
+              </div>
+            </div>
+          </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+
+
+
+
+            <div class="container-fluid mt--7">
+              <!-- Table -->
+              <div class="row">
+                <div class="col">
+                  <br>
+                  <div class="card shadow">
+                    <div class="table-responsive">
+                      <div class="card-header bg-transparent pb-5">
+
+
+                        <ng-template #content let-modal   class="k">
+      
+                          <div  *ngFor="let a of amira , let i=index" >
+                            <div class="card shadow" class="a">
+                              <div  *ngIf="this.a.categorie == 'profile'">
+                                <div class="card-header bg-transparent pb-5">
+                                  <h1 class="text-info"> <b>Task {{ this.a.id }}: </b> </h1>  
+                        <h2 class="text-default"> <b>Title: </b></h2>
+                        <h2> <input type="checkbox" ng-model="all"  class="z"> &nbsp;&nbsp;{{ this.a.title }}</h2>
+                        <h2 class="text-default"> <b>description: </b></h2>
+                        <form>
+                         <b>
+                        <textarea  rows="5" cols="40" class="form-control form-control-alternative" disabled rows="3" placeholder=""> {{ this.a.description }} </textarea> </b>
+                        </form>
+                        <br>
+                        <h1 class="text-info"> <b>Subtasks : </b> </h1>  
+                        <h2 class="text-default"> <b>Title: </b></h2>
+                        <h2> <input type="checkbox" ng-model="all"  class="z"> &nbsp;&nbsp;{{ this.a.subtasks[0].title }}</h2>
+                        <h2 class="text-default"> <b>description: </b></h2>
+                        <textarea  rows="5" cols="40" class="form-control form-control-alternative" disabled rows="3" placeholder=""> {{ this.a.subtasks[0].description }} </textarea> 
+                        </div>
+                        </div> 
+                        </div>
+                        </div>
+                    
+                    
+                    
+                    
+                        
+                        
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">Save</button>
+                        </div>
+                      </ng-template>
+                      
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+</div>
